@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <title>Make This In An Hour</title>
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  </head>
+  <body>
+  <div class="container">
+    <h1 class="text-center">Make This In An Hour</h1>
+    <p>One of my friends has been saying for a couple months that he would make his
+    website over spring break.  Now it's the end of spring break and he hasn't
+    started.  His birthday is tomorrow, and I've decided to be an <s>asshole</s>
+    good friend and give the gift of accountability by writing down step-by-step
+    instructions to make it as simple as possible.</p>
+
+    <p>It really only takes an hour to make a website.  I know because I timed
+    myself doing the following and the whole process took me just under an hour
+    to make this website.  (I even did the registering a new domain and
+    creating a new Github account for a good measure!)  You can view the code
+    for this website on <a
+      href="http://github.com/smilli/makethisinanhour">Github</a>.</p>
+
+    <ol>
+      <li>Go to <a href="http://namecheap.com">namecheap.com</a> and register a
+      domain.  This is optional and only if you want a custom domain name.</li>
+      <li>Make a <a href="https://github.com/join">Github account</a> and
+      download <a href="http://git-scm.com/downloads">Git</a> if you haven't
+      already.</li>
+      <li>Create a directory to hold your website and cd into it.  <code>mkdir my-site && cd
+        my-site</code>.  All future commands will assume you are within this
+      directory.</li>
+      <li>Make <a href="https://github.com/new">a new Github repository</a> for your site titled
+      yourusername.github.io.  For example, my Github account is smilli, so my
+      repository is named smilli.github.io.</li>
+      <li>While in the directory for your website run <code>git init</code> and
+      <code>git remote add origin
+        https://github.com/username/username.github.io.git</code> with username
+      replaced by your username.</li>
+      <li>Make a file called "index.html" in your website's folder with the HTML
+      for your main page.  Don't spend long on this; it can be as simple as the following:</li>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;YOUR SITE TITLE&lt;/title&gt;
+  &lt;-- Add some style to your site, see http://getbootstrap.com for details --&gt;
+  &lt;link rel=&quot;stylesheet&quot;
+  href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;YOUR SITE TITLE&lt;/h1&gt;
+  &lt;p&gt;Your text blahblahbhalbha&lt;/p&gt;
+  &lt;p&gt;Another paragraph!  Maybe more text!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      <li>Enter whatever text or html you want in the file.  You can view the
+      changes you're making locally by running <code>python -m
+        SimpleHTTPServer 8000</code> and then navigating to
+      http://localhost:8000 in your browser.</li>
+      <li>Now run the following commands:
+<pre>
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+</pre>
+      </li>
+      <li>Go to http://yourusername.github.io.  You should now see your site!
+      Congratulations, you put something online.
+      </li>
+      <li>If you want to add your own domain name, create a file called "CNAME" in
+      all caps.  Then add a single line that says 'yourdomainname.com' (no http
+      or www) to the file.  For example the CNAME file for this website looks like this:
+<pre>
+makethisinanhour.com
+</pre>
+      View details on <a
+        href="https://help.github.com/articles/adding-a-cname-file-to-your-repository/">CNAME
+        configuration</a> here.</li>
+      <li>Like before, push your changes to Github.
+<pre>
+git add .
+git commit -m "Add CNAME"
+git push
+</pre>
+      </li>
+      <li>Now login to http://namecheap.com and click
+        on the domain you want under <a
+        href="https://manage.www.namecheap.com/myaccount/domain-list.asp?from=memberhome">the
+        list of your domains</a>.  The list of domains should look like this:
+
+        <img src="/img/yourdomains.png"/>
+
+        <p>After clicking on your domain, you should see a link that says "All Host
+        Records" on the left sidebar underneath "Host Management".  Click this.
+        Now you should see the default records that Namecheap adds for your
+        site.</p>
+
+        <img src="/img/oldrecords.png"/>
+
+        <p>Modify your records to look like this (with username replaced by your
+        username of course):</p>
+
+        <img src="img/records.png"/>
+      </li>
+      <li>
+        After the DNS changes propagate, you will be able to see
+      your website on your domain!  Congrats :)
+      </li>
+      </ol>
+    </div>
+  </body>
+</html>
