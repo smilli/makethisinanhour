@@ -15,6 +15,7 @@
     good friend and give the gift of accountability by writing down step-by-step
     instructions to make it as simple as possible.</p>
 
+
     <p>It really only takes an hour to make a website.  I know because I timed
     myself doing the following and the whole process took me just under an hour
     to make this website.  (I even did the registering a new domain and
@@ -23,8 +24,6 @@
       href="https://github.com/smilli/makethisinanhour">GitHub</a>.</p>
 
     <ol>
-      <li>Go to <a href="http://namecheap.com">namecheap.com</a> and register a
-      domain.  This is optional and only if you want a custom domain name.</li>
       <li>Make a <a href="https://github.com/join">GitHub account</a> and
       download <a href="http://git-scm.com/downloads">Git</a> if you haven't
       already.</li>
@@ -58,10 +57,10 @@
 &lt;/html&gt;
 </pre>
       <li>Enter whatever text or html you want in the file.  You can view the
-      changes you're making locally by running <code>python -m http.server
-        8000</code> if you're using Python 3 and <code>python -m
+      changes you're making locally by running <code>python3 -m http.server
+        8000</code> if you're using Python 3 or <code>python -m
         SimpleHTTPServer 8000</code> for Python 2.  Then navigate to
-      http://localhost:8000 in your browser.</li>
+      http://localhost:8000 in your browser. You should see your website! (You can quit the command with Control-C)</li>
       <li>Now run the following commands:
 <pre>
 git add .
@@ -89,7 +88,10 @@ git commit -m "Add CNAME"
 git push
 </pre>
       </li>
-      <li>Now login to https://www.namecheap.com/ and click
+            <li>Go to <a href="http://namecheap.com">namecheap.com</a> and register a
+      domain.  This is optional and only if you want a custom domain name. </li>
+
+      <li>Now click
         on the domain you want under <a
         href="https://manage.www.namecheap.com/myaccount/domain-list.asp?from=memberhome">the
         list of your domains</a>.  The list of domains should look like this:
