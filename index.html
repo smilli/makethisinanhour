@@ -23,6 +23,9 @@
     for this website on <a
       href="https://github.com/smilli/makethisinanhour">GitHub</a>.</p>
 
+    <hr/>
+
+    <h2>Website Instructions</h2>
     <ol>
       <li>Make a <a href="https://github.com/join">GitHub account</a> and
       download <a href="http://git-scm.com/downloads">Git</a> if you haven't
@@ -56,7 +59,7 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-      <li>Enter whatever text or html you want in the file.  You can view the
+      <li>Enter whatever text or HTML you want in the file.  You can view the
       changes you're making locally by running <code>python3 -m http.server
         8000</code> if you're using Python 3 or <code>python -m
         SimpleHTTPServer 8000</code> for Python 2.  Then navigate to
@@ -71,8 +74,17 @@ git push -u origin master
       <li>Go to https://yourusername.github.io/.  You should now see your site!
       Congratulations, you put something online.
       </li>
-      <li>If you want to add your own domain name, create a file called <code>CNAME</code>
-      in all caps.  Then add a single line that says <code>yourdomainname.com</code> (no
+  </ol>
+  <hr/>
+
+  <h2>Adding your Custom Domain</h2>
+  <ol>
+      <li>Go to <a href="http://namecheap.com">namecheap.com</a> and register a
+      domain if you don't have one yet.</li>
+
+      <li>Create a file called <code>CNAME</code>
+      in all caps in your website directory.  Then add a single line
+      that says <code>yourdomainname.com</code> (no
       <code>http</code> or <code>www</code>) to the file.  For example the CNAME file for
       this website looks like this:
 <pre>
@@ -88,10 +100,8 @@ git commit -m "Add CNAME"
 git push
 </pre>
       </li>
-            <li>Go to <a href="http://namecheap.com">namecheap.com</a> and register a
-      domain.  This is optional and only if you want a custom domain name. </li>
 
-      <li>Now click
+      <li>While logged into Namecheap, click
         on the domain you want under <a
         href="https://manage.www.namecheap.com/myaccount/domain-list.asp?from=memberhome">the
         list of your domains</a>.  The list of domains should look like this:
@@ -115,6 +125,10 @@ git push
       your website on your domain!  Congrats :)
       </li>
       </ol>
+
+      <hr/>
+      <h4 class="text-center">Did you like this tutorial?  Follow me on <a
+          href="http://twitter.com/smithamilli">Twitter</a>.</shameless plug></h4>
     </div>
   </body>
 </html>
